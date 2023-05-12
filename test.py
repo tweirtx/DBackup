@@ -1,7 +1,7 @@
 import sqlalchemy
 
 someengine = sqlalchemy.create_engine("postgresql://dozer:simplepass@localhost/dozer")
-backupengine = sqlalchemy.create_engine("mysql+mysqldb://test:asdfasdf@localhost/test")
+backupengine = sqlalchemy.create_engine("sqlite://")
 
 metadata_obj = sqlalchemy.MetaData()
 metadata_obj.reflect(bind=someengine)
